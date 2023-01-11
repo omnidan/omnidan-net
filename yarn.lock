@@ -180,7 +180,7 @@
   dependencies:
     "@parcel/plugin" "2.8.2"
 
-"@parcel/config-default@2.8.2":
+"@parcel/config-default@2.8.2", "@parcel/config-default@^2.8.2":
   version "2.8.2"
   resolved "https://registry.yarnpkg.com/@parcel/config-default/-/config-default-2.8.2.tgz#2f96207f84bdd155cf4bfd02f10519b2ec33449a"
   integrity sha512-1ELJAHx37fKSZZkYKWy6UdcuLRv5vrZJc89tVS6eRvvMt+udbIoSgIUzPXu7XemkcchF7Tryw3u2pRyxyLyL3w==
@@ -216,7 +216,7 @@
     "@parcel/transformer-react-refresh-wrap" "2.8.2"
     "@parcel/transformer-svg" "2.8.2"
 
-"@parcel/core@2.8.2":
+"@parcel/core@2.8.2", "@parcel/core@^2.8.2":
   version "2.8.2"
   resolved "https://registry.yarnpkg.com/@parcel/core/-/core-2.8.2.tgz#9ee5a0b18337885dc0893958f9e4190cb599200a"
   integrity sha512-ZGuq6p+Lzx6fgufaVsuOBwgpU3hgskTvIDIMdIDi9gOZyhGPK7U2srXdX+VYUL5ZSGbX04/P6QlB9FMAXK+nEg==
@@ -1240,6 +1240,11 @@ ordered-binary@^1.2.4:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/ordered-binary/-/ordered-binary-1.4.0.tgz#6bb53d44925f3b8afc33d1eed0fa15693b211389"
   integrity sha512-EHQ/jk4/a9hLupIKxTfUsQRej1Yd/0QLQs3vGvIqg5ZtCYSzNhkzHoZc7Zf4e4kUlDaC3Uw8Q/1opOLNN2OKRQ==
+
+parcel-resolver-ignore@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/parcel-resolver-ignore/-/parcel-resolver-ignore-2.1.3.tgz#869673c40ccab1985af74020cd28b360b149155f"
+  integrity sha512-C8uLvR4o7SPRSsQ/Nylm1/PdsLwn/Z9bzCs66qT3XIebJC7ojaFFF3MDl/mie5audngjcFF8wzU0AoEQkZq2pA==
 
 parcel@^2.8.2:
   version "2.8.2"
