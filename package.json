@@ -1,0 +1,16 @@
+{
+  "name": "omnidan-net",
+  "version": "1.0.0",
+  "description": "omnidan.net website",
+  "author": "Daniel Bugl",
+  "license": "CC-BY-SA-4.0",
+  "scripts": {
+    "dev": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "2.8.2",
+    "@parcel/transformer-webmanifest": "2.8.2",
+    "parcel": "^2.8.2"
+  }
+}

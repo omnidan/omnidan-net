@@ -1,0 +1,187 @@
+html {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 1.5em;
+  line-height: 1.4;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  padding: 8% 8% 0% 8%;
+  display: grid;
+  gap: 0.5em;
+  grid-template-areas:
+    'header'
+    'intro'
+    'job'
+    'books'
+    'socials'
+    'aside';
+}
+
+a, a:visited {
+  color: #FFFFFF;
+}
+
+.picture-me {
+  height: 100%;
+  max-height: 90vh;
+}
+
+.picture-book {
+  width: 100%;
+}
+
+@media (min-width: 500px) and (min-height: 500px) {
+  html {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape), (min-width: 1000px) {
+  body {
+    padding: 5% 25% 5% 10%;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      'header   aside'
+      'intro    aside'
+      'job      aside'
+      'books    aside'
+      'socials  aside';
+  }
+
+  .picture-me {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    padding: 5% 25% 5% 15%;
+  }
+}
+
+aside {
+  grid-area: aside;
+  display: grid;
+  place-content: center;
+  min-width: 50%;
+}
+
+header {
+  grid-area: header;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  line-height: 1.1;
+}
+
+.intro {
+  grid-area: intro;
+}
+
+.job {
+  grid-area: job;
+}
+
+.books {
+  padding-top: 0.5em;
+  grid-area: books;
+}
+
+.socials {
+  padding-top: 1em;
+  grid-area: socials;
+}
+
+.social svg {
+  fill: #FFFFFF;
+  opacity: 0.8;
+  transition: all 300ms ease-in-out;
+}
+
+.social svg:hover {
+  z-index: 100;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.list {
+  display: flex;
+  gap: 1em;
+  padding-top: 0.5em;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: fit-content;  
+}
+
+.socials .list {
+  padding-top: 0;
+}
+
+main section {
+  padding: 0.5em 0;
+}
+
+.magic {
+  font-weight: bold;
+  background-image: linear-gradient(100deg, #2196F3 0%, #9C27B0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.book {
+  transform: scale(1);
+  perspective: 600px;
+  max-width: 200px;
+}
+
+.book img {
+  border-radius: 10px;
+}
+
+.book:hover {
+  z-index: 100;
+  transform: scale(1.1);
+}
+
+.book, .book img {
+  transition: all 300ms ease-out;
+}
+
+::-moz-selection {
+  background: #A0A0A0;
+  text-shadow: none;
+}
+
+::selection {
+  background: #A0A0A0;
+  text-shadow: none;
+}
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+}
+
