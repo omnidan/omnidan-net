@@ -22,5 +22,6 @@ function resetBookEffect (container) {
 
 document.querySelectorAll('.book').forEach(book => {
   book.addEventListener('mousemove', e => applyBookEffect(book, e));
-  book.addEventListener('mouseleave', e => resetBookEffect(book, e));
+  book.addEventListener('mousedown', e => resetBookEffect(book));
+  book.addEventListener('mouseleave', e => resetBookEffect(book));
 });
