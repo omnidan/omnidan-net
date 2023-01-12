@@ -80,18 +80,9 @@ header {
   grid-area: books;
 }
 
-.picture-book {
-  width: 100%;
-}
-
 .book {
   transform: scale(1);
-  perspective: 600px;
   max-width: 200px;
-}
-
-.book img {
-  border-radius: 10px;
 }
 
 .book:hover {
@@ -99,7 +90,12 @@ header {
   transform: scale(1.1);
 }
 
-.book, .book img {
+.picture-book {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.book, .picture-book {
   transition: all 300ms ease-out;
 }
 
