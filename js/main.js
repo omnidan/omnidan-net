@@ -9,10 +9,9 @@ function bookEffect (container, rotateX, rotateY, brightness) {
 }
 
 function applyBookEffect (container, e) {
-  const { width, height } = container.getBoundingClientRect();
-  const rotateY = minMaxScaling(e.offsetX, 0, width, -20, 20);
-  const rotateX = minMaxScaling(e.offsetY, 0, height, 20, -20);
-  const brightness = minMaxScaling(e.offsetY, 0, height, 1.2, 0.8);
+  const rotateY = minMaxScaling(e.offsetX, 0, 200, -20, 20);
+  const rotateX = minMaxScaling(e.offsetY, 0, 250, 20, -20);
+  const brightness = minMaxScaling(e.offsetY, 0, 250, 1.2, 0.8);
   bookEffect(container, rotateX, rotateY, brightness);
 }
 
