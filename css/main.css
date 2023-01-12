@@ -90,6 +90,12 @@ header {
   transform: scale(1.1);
 }
 
+@media (hover: none) {
+  .book:hover {
+    transform: scale(1);
+  }
+}
+
 .picture-book {
   width: 100%;
   border-radius: 10px;
@@ -119,6 +125,13 @@ header {
   z-index: 100;
   opacity: 1;
   transform: scale(1.1);
+}
+
+@media (hover: none) {
+  .social svg:hover {
+    opacity: 0.8;
+    transform: scale(1);
+  }
 }
 
 /* picture of me */
