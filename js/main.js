@@ -6,7 +6,6 @@ function bookEffect (container, rotateX, rotateY, brightness) {
   const img = container.querySelector('img');
   img.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   img.style.filter = `brightness(${brightness})`;
-  console.log(img.style.transform)
 }
 
 function applyBookEffect (container, e) {
