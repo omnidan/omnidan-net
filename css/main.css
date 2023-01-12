@@ -186,10 +186,35 @@ aside {
   }
 
   a[href]::after {
-    content: " (" attr(href) ")";
+    content: attr(title) " (" attr(href) ")";
   }
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
+  .list {
+    flex-direction: column;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+  .book {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .book img {
+    max-width: 200px;
+  }
+
+  .socials .list {
+    padding-top: 0.5em;
+  }
+
+  .social svg {
+    display: none;
+  }
+
+  .picture-me {
+    display: none;
   }
 }
