@@ -81,17 +81,24 @@ header {
 }
 
 .book {
-  transform: scale(1);
   max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
 }
 
-.book:hover {
+.book-container {
+  transform: scale(1);
+}
+
+.book-container:hover {
   z-index: 100;
   transform: scale(1.1);
 }
 
 @media (hover: none) {
-  .book:hover {
+  .book-container:hover {
     transform: scale(1);
   }
 }
@@ -101,7 +108,7 @@ header {
   border-radius: 10px;
 }
 
-.book, .picture-book {
+.book-container, .picture-book {
   transition: all 300ms ease-out;
 }
 
