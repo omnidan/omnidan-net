@@ -36,10 +36,49 @@ a, a:visited {
 
 .magic {
   font-weight: bold;
-  background-image: linear-gradient(100deg, #2196F3 0%, #9C27B0 100%);
+  background-image: linear-gradient(100deg, #21DCF3 0%, #E23AFF 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.magic-border {
+  position: relative;
+}
+
+.magic-border:before, .magic-border:after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  background: linear-gradient(45deg, #21DCF3, #E23AFF, #21DCF3, #E23AFF);
+  background-size: 400%;
+  border-radius: 10px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  z-index: -1;
+  animation: border-animation 20s linear infinite;
+}
+
+.magic-border:after {
+  filter: blur(64px);
+}
+
+.magic-border:hover:before, .magic-border:hover:after {
+  background: none;
+  filter: none;
+}
+
+@keyframes border-animation {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .list {
@@ -90,11 +129,13 @@ header {
 
 .book-container {
   transform: scale(1);
+  max-height: 250px;
 }
 
 .book-container:hover {
   z-index: 100;
   transform: scale(1.1);
+  max-height: auto;
 }
 
 @media (hover: none) {
